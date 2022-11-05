@@ -1,14 +1,21 @@
 .main-page{
   display:flex;
+  justify-content: space-between;
+  @media (max-width:767px) {
+    
+  }
   .side-bar{
-    max-width:30%;
+   width:20%;
    
     @media (max-width:767px){
       width:10%;
     }
   }
   .main-content{
-    // max-width:75%;
+    width:80%;
+    @media (max-width:767px) {
+      width:90%;
+    }
 
   }
 }

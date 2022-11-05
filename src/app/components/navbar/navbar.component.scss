@@ -1,0 +1,80 @@
+@import '../../../assets/styles/variables.scss';
+
+.navbar {
+    box-shadow: 0 0 10px #ddd;
+    width: 100%;
+
+    @media (max-width:567px) {
+        justify-content: center;
+
+    }
+
+
+    .search-Area {
+        position: relative;
+
+        &::before {
+            content: '\f002';
+            font-family: "Font Awesome 6 free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            color: $grey-color;
+            padding: 3px;
+        }
+
+        input {
+            width: 180px;
+            padding: 3px 0px 3px 30px;
+            margin: 10px;
+            border: 1px solid $grey-color;
+            border-radius: 20px;
+            transition: width 0.3s;
+
+            &:focus {
+                width: 200px;
+            }
+
+            @media (max-width:567px) {
+                width: 130px;
+
+                &:focus {
+                    width: 150px;
+                }
+            }
+
+        }
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        width: auto;
+
+        .bell {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $red-color;
+                position: absolute;
+                left: 10px;
+                top: 3px;
+            }
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin: 10px;
+
+        }
+
+    }
+
+}

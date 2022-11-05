@@ -10,5 +10,21 @@
     font-family: "Cairo", Arial, Helvetica, sans-serif;
 
 }
+
 // import vaiables file
 @import './assets/styles/variables.scss';
+
+
+//general styles
+
+.flex-between{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: none;
+    
+}

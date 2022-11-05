@@ -13,6 +13,7 @@ import { FilesPageComponent } from './pages/files-page/files-page.component';
 import { PlansPageComponent } from './pages/plans-page/plans-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     FilesPageComponent,
     PlansPageComponent,
     NotFoundPageComponent,
-    SideNavComponent
+    SideNavComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
