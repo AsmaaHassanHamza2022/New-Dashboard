@@ -1,0 +1,14 @@
+.main-page{
+  display:flex;
+  .side-bar{
+    max-width:30%;
+   
+    @media (max-width:767px){
+      width:10%;
+    }
+  }
+  .main-content{
+    // max-width:75%;
+
+  }
+}
