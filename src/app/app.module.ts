@@ -14,6 +14,9 @@ import { PlansPageComponent } from './pages/plans-page/plans-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { QuickDraftComponent } from './components/quick-draft/quick-draft.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PlansPageComponent,
     NotFoundPageComponent,
     SideNavComponent,
-    NavbarComponent
+    NavbarComponent,
+    WelcomeComponent,
+    QuickDraftComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

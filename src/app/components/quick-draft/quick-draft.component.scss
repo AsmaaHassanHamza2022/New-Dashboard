@@ -1,0 +1,26 @@
+
+.quick-daft-section{
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    padding:20px;
+    .form{
+        input,
+        textarea{
+            width:100%;
+            background-color: #fff;
+            border:0px;
+            width: 100%;
+            background-color: #eee;
+            border: 1px solid #eee;
+            margin: 10px 0px;
+            border-radius: 5px;
+            padding: 5px;
+            outline: none;
+        }
+        textarea{
+            resize: none;
+            height:88px;
+        }
+    }
+}

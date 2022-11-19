@@ -1,0 +1,23 @@
+<div class="quick-daft-section">
+    <div class="header">
+        <div class="h-title">
+            <h4>Quick Draft</h4>
+            <p>Write A Draft For Your Ideas</p>
+        </div>
+        <form [formGroup]="quickDraftForm" class="form">
+            <div class="input">
+                <input type="text" name="title" placeholder="title"  formControlName="title"/>
+            </div>
+            <div class="message">
+               <textarea name="message" id=""  placeholder="Your Thought" cols="30"  formControlName="desc"></textarea>
+            </div>
+
+            <div class="footer">
+                <button  (click)="saveDraftData()">Save</button>
+              </div>
+           
+            </form>
+
+    </div>
+
+</div>

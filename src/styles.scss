@@ -88,8 +88,8 @@ body{
             display:block;  
         }
         .section{
-            background-color: #fff;
-            box-shadow: 0 0 10px #ddd;
+            // background-color: #fff;
+            // box-shadow: 0 0 10px #ddd;
             padding:10px;
             @media (max-width:767px){
               margin:20px 10px; 
@@ -97,4 +97,33 @@ body{
         }
 
     }
+
+    .h-title{
+           
+        h3{
+            font-size:18px;
+            font-weight: 700;
+            color:#000;
+
+        }
+        p{
+            font-size:15px;
+            font-weight:400;
+            color:#888;
+        }
+    }
+
+    .footer{
+        display: flex;
+        justify-content: flex-end;
+        button{
+            padding: 0px 25px;
+            border: 1px solid #0075ff;
+            background-color:#0075ff ;
+            color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+    }
+}
 }
