@@ -17,6 +17,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { QuickDraftComponent } from './components/quick-draft/quick-draft.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { YearlyTargetComponent } from './components/yearly-target/yearly-target.component';
+import { TicketStatisticsComponent } from './components/ticket-statistics/ticket-statistics.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SideNavComponent,
     NavbarComponent,
     WelcomeComponent,
-    QuickDraftComponent
+    QuickDraftComponent,
+    YearlyTargetComponent,
+    TicketStatisticsComponent
   ],
   imports: [
     BrowserModule,

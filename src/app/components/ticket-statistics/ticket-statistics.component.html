@@ -1,0 +1,14 @@
+<div class="ticket-statics">
+    <div class="h-title">
+        <h4>Tickets Statistics</h4>
+        <p>Everything About Support Tickets </p>
+    </div>
+    <div class="box-items">
+        <div class="item" *ngFor='let item of ticketData'>
+            <div class="icon" [innerHTML]="item.image"></div>
+            <div class="value">{{item.value}}</div>
+            <div class="item-title">{{item.title}}</div>
+
+        </div>
+    </div>
+</div>

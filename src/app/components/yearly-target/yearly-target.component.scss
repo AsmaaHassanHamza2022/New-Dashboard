@@ -1,0 +1,129 @@
+.yearly-target{
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    padding:20px;
+    .targets{
+        .item{
+            display:flex;
+            align-items: center;
+            .image{
+                width: 80px;
+                height:60px;
+                background-color:rgb(0 117 255 / 20%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .c-blue{
+                    color:#0075ff
+                }
+
+                &.orange{
+                    background-color:rgb(245 158 11 / 20%);
+                    .c-orange{
+                        color:#f59e0b;
+                    }
+                }
+                &.green{
+                    background-color:rgb(34 197 94 / 20%);
+                    .c-green{
+                        color:#22c55e
+                    }
+                }
+
+            }
+            .data{
+                flex:1;
+                margin:  10px;
+                .main-t{
+                    color:#888;
+                }
+                .main-v{
+                    color:#000;
+                    font-weight: bolder;
+                }
+                .progress{
+                    position: relative;
+                    .bar-holder{
+                        width:100%;
+                        height: 4px;
+                        background-color: rgb(0 117 255 / 20%);
+                        position: relative;
+
+                        &.bar-holder-orange{
+                            background-color:rgb(245 158 11 / 20%);
+                        }
+                        &.bar-holder-green{
+                            background-color:rgb(34 197 94 / 20%);
+                        }
+                        .bar{
+                            width:50%;
+                            height: 4px;
+                            background-color:#0075ff;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        
+                            &.bar-orange{
+                                background-color:#f59e0b;
+                                width:60%;
+                            }
+                            &.bar-green{
+                                background-color:#22c55c;
+                                width:70%;
+                            }
+                        }
+                        .bar-indicator{
+                            background-color: #0075ff;
+                            border: 2px;
+                            position: absolute;
+                            top: -40px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            padding: 2px 5px;
+                            border-radius: 6px;
+                            color: #fff;
+    
+                            &:after{
+                                content: "";
+                                width: 0px;
+                                height: 0px;
+                                position: absolute;
+                                bottom:-14px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                border: transparent;
+                                border-top: 7px solid #0075ff;
+                                border-bottom: 7px solid transparent;
+                                border-left: 7px solid transparent;
+                                border-right: 7px solid transparent;
+                            }
+
+                            &.bar-indicator-orange{
+                                background-color:#f59e0b;
+                                left: 60%;
+                                transform: translateX(-60%);
+                                &:after{
+                                    border-top: 7px solid #f59e0b;
+                                    }
+                            }
+                            &.bar-indicator-green{
+                               background-color:#22c55c;
+                               left: 70%;
+                               transform: translateX(-70%);
+                               
+                                &:after{
+                                border-top: 7px solid #22c55c;
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}
