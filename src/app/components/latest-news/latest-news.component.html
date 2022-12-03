@@ -1,0 +1,20 @@
+<div class="letest-news">
+    <div class="h-title">
+        <h4>Latest News</h4>
+       
+    </div>
+    <div class="content">
+        <div class="item" *ngFor="let item of allLetestNews">
+            <div class="image">
+                <img [src]="item.image"/>
+            </div>
+            <div class="content-info">
+                <h4>{{item.title}}</h4>
+                <p>{{item.content}}</p>
+            </div>
+            <div class="content-time">
+                <span>{{item.time}}</span>
+            </div>
+        </div>
+    </div>
+</div>

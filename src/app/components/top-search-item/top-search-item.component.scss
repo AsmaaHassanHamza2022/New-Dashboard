@@ -1,0 +1,42 @@
+.letest-news {
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px;
+
+    .content {
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+           
+
+            .content-info {
+                p {
+                    color: #888;
+                }
+            }
+
+            .content-time{
+                background-color: #eee;
+                padding: 0px 10px;
+                border-radius: 10px;
+                span{
+                    font-size:13px;
+                }
+            }
+
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            span{
+                color:#888;
+            }
+           }
+
+    }
+}

@@ -19,6 +19,10 @@ import { QuickDraftComponent } from './components/quick-draft/quick-draft.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { YearlyTargetComponent } from './components/yearly-target/yearly-target.component';
 import { TicketStatisticsComponent } from './components/ticket-statistics/ticket-statistics.component';
+import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+import { LatestTasksComponent } from './components/latest-tasks/latest-tasks.component';
+import { TopSearchItemComponent } from './components/top-search-item/top-search-item.component';
+import { LatestUploadComponent } from './components/latest-upload/latest-upload.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { TicketStatisticsComponent } from './components/ticket-statistics/ticket
     WelcomeComponent,
     QuickDraftComponent,
     YearlyTargetComponent,
-    TicketStatisticsComponent
+    TicketStatisticsComponent,
+    LatestNewsComponent,
+    LatestTasksComponent,
+    TopSearchItemComponent,
+    LatestUploadComponent
   ],
   imports: [
     BrowserModule,

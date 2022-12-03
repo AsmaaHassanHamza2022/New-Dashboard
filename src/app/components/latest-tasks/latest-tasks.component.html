@@ -1,0 +1,17 @@
+<div class="letest-news">
+    <div class="h-title">
+        <h4>Latest Tasks</h4>
+       
+    </div>
+    <div class="content">
+        <div class="item" [class.deleted]="item.deleteFlag" *ngFor="let item of allLatestTasks ;let i= index;">
+            <div class="content-info">
+                <h4>{{item.title}}</h4>
+                <p>{{item.content}}</p>
+            </div>
+            <div (click)="delete(i)" class="content-time">
+                <i class="fa-regular fa-trash-can"></i>
+            </div>
+        </div>
+    </div>
+</div>

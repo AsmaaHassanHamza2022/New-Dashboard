@@ -1,0 +1,54 @@
+.letest-news {
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px;
+
+    .content {
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width:767px){
+                justify-content: center;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #eee;
+                margin-bottom: 15px;
+                padding-bottom: 30px;
+
+            }
+
+            &.deleted {
+                opacity: 0.3;
+
+                h4,
+                p {
+                    text-decoration: line-through;
+                }
+
+            }
+
+            .content-info {
+                p {
+                    color: #888;
+                }
+            }
+
+            .content-time {
+                padding: 5px 10px;
+                border-radius: 10px;
+
+                &:hover {
+                    i {
+                        color: red;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
