@@ -1,3 +1,15 @@
+#project overView
+I use in this project 
+1-some UI Libarary as sweetalert2
+2-for the first time I use fireBase To make crud operation in my DashBoard [Courses]
+3-I use Angular matrial popup to add new Course
+4- I deal with FireStore &storage in FireBase
+
+
+
+
+
+
 # DemoProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
