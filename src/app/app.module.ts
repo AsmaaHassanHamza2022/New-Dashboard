@@ -23,6 +23,19 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
 import { LatestTasksComponent } from './components/latest-tasks/latest-tasks.component';
 import { TopSearchItemComponent } from './components/top-search-item/top-search-item.component';
 import { LatestUploadComponent } from './components/latest-upload/latest-upload.component';
+import { TestDirective } from './directives/test.directive';
+import { CourseWidgetComponent } from './components/course-widget/course-widget.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore, FirestoreModule } from '@angular/fire/firestore';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import { providePerformance,getPerformance } from '@angular/fire/performance';
+import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -45,15 +58,30 @@ import { LatestUploadComponent } from './components/latest-upload/latest-upload.
     LatestNewsComponent,
     LatestTasksComponent,
     TopSearchItemComponent,
-    LatestUploadComponent
+    LatestUploadComponent,
+    TestDirective,
+    CourseWidgetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions()),
+    provideMessaging(() => getMessaging()),
+    providePerformance(() => getPerformance()),
+    provideRemoteConfig(() => getRemoteConfig()),
+    provideStorage(() => getStorage()),
+    FirestoreModule
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

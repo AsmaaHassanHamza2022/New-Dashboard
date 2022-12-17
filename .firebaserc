@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-38fb0": {
+      "hosting": {
+        "Demo-project": [
+          "fir-38fb0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-38fb0"
+  }
+}

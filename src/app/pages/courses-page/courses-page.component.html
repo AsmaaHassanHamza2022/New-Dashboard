@@ -1,1 +1,9 @@
-<p>courses-page works!</p>
+<div class="course-page">
+    <div class="d-flex">
+        <div class="item" *ngFor="let course of courses">
+            <course-widget [course]="course"></course-widget>
+        </div>
+
+        
+    </div>
+</div>
