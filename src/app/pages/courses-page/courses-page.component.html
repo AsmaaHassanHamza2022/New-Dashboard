@@ -1,4 +1,9 @@
 <div class="course-page">
+    <div class="add-btn">
+        <button (click)="openDialog()">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+    </div>
     <div class="d-flex">
         <div class="item" *ngFor="let course of courses">
             <course-widget [course]="course"></course-widget>

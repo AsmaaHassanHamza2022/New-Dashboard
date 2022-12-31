@@ -4,5 +4,5 @@ export interface MyCourses{
     numberOfStudent:number;
     price:number;
     ProfileImage:string;
-    instructorImage:string;
+    // instructorImage:string;
 }

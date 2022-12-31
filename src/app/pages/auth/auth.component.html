@@ -1,0 +1,44 @@
+
+<div class="login-part">
+   <div class="banner">
+   </div>
+   <div class="login-content">
+    <div class="content">
+        <h4>Sign in</h4>
+    <div class="login-google ">
+        <button (click)="authService.SigninWithGoogle()">
+            <img src="../../../assets/images/google.png"/>
+            <!-- continue with Google -->
+        </button>
+    </div>
+    <div class="sign-in-with-email">
+        <h5>Or sign in with email and password</h5>
+    </div>
+    <div class="email-pass-section">
+       <form [formGroup]="signInForm">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Enter your email</mat-label>
+              <input matInput   placeholder="pat@example.com" formControlName="email" required>
+              <mat-error *ngIf="this.f['email'].invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                <button class="eye-icon" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              
+          </div>
+       </form>
+    </div>
+
+    <div class="login-button">
+        <button> Sign in</button>
+    </div>
+    </div>
+   </div>
+
+</div>

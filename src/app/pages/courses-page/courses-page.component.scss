@@ -1,5 +1,20 @@
 .course-page{
     padding:20px;
+    .add-btn{
+        display: flex;
+        justify-content: flex-end;
+        margin:20px;
+        button{
+            width:30px;
+            height:30px;
+            background-color:#0075ff;
+            border-radius: 50%;
+            border:1px solid #fff;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+    }
     .d-flex{
         display:flex;
         justify-content: space-around;

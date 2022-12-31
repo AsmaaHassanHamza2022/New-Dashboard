@@ -1,0 +1,59 @@
+<div class="add-new-course">
+    <form [formGroup]="addCourseForm">
+        <header>
+            <h4>Add New Course To Your List</h4>
+        </header>
+
+        <div class="content">
+            <mat-form-field appearance="fill">
+                <mat-label>Course Title</mat-label>
+                <input matInput formControlName="title">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Course Description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+
+            <div class="numbers-fields">
+                <mat-form-field appearance="fill">
+                    <mat-label>number of Students</mat-label>
+                    <input type="number"  formControlName="numberOfStudents" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>course Price</mat-label>
+                    <input type="number" matInput formControlName="coursePrice">
+                </mat-form-field>
+            </div>
+
+            <div class="uploaded-feilds">
+               <div class="main-file">
+                <button type="button" mat-raised-button (click)="fileInput.click()"> 
+                    <span *ngIf="!MainUploadedImage">Chooes Course Poster</span> 
+                    <span *ngIf="MainUploadedImage">Uploded Image :{{MainUploadedImage}}</span>
+                </button>
+                <!-- <mat-progress-bar *ngIf="waitingUpload" mode="indeterminate"></mat-progress-bar> -->
+                <input hidden (change)="onFileSelected('mainFile', $event)" #fileInput type="file" id="mainfile">
+               </div>
+                <!-- <div class="inst-file">
+                    <button type="button" mat-raised-button (click)="fileInputInst.click()">
+                        <span *ngIf="!SubuploadedImage">  Chooes Instractor Image</span> 
+                        <span *ngIf="SubuploadedImage">Uploded Image :{{MainUploadedImage}}</span>
+                      </button>
+                    <input hidden (change)="onFileSelected('subFile',$event)" #fileInputInst type="file" id="Subfile">
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="actions">
+            <button (click)="addNewCourse()" mat-raised-button color="primary">
+                Add New Courser
+            </button>
+        </div>
+
+
+    </form>
+
+</div>

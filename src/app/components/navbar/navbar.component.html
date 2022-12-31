@@ -1,13 +1,25 @@
 <div class=" navbar flex-between ">
     <div class="search-Area">
-       <input type="search" placeholder="Search" name="search" id="search-input">
+        <input type="search" placeholder="Search" name="search" id="search-input">
     </div>
 
-    <div class="icons">
+    <!-- <div class="icons">
+         <span></span>
         <div class="bell">
             <i class="fa-regular fa-bell fa-lg"></i>
         </div>
         <img src="../../../assets/images/avatar.png"/>
+    </div> -->
+
+
+    <div class="logout" >
+        <button mat-button [matMenuTriggerFor]="menu">Welcome, {{userName}}</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+
+
+        
     </div>
 
 </div>

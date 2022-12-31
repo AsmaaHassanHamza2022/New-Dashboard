@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { collectionData, Firestore,collection } from '@angular/fire/firestore';
+
 import { Observable } from 'rxjs';
+import { CourseData } from '../interfaces/courseInterface';
 import { MyCourses } from '../models/Course';
 
 @Injectable({
@@ -8,7 +10,7 @@ import { MyCourses } from '../models/Course';
 })
 export class CouresService {
 
-  constructor(private fire: Firestore) {
+  constructor(private fire: Firestore   ) {
    }
 
   public getAllCourses(){
@@ -20,4 +22,5 @@ export class CouresService {
         return item$;
       
   }
+
 }

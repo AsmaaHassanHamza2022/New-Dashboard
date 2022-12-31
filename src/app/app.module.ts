@@ -36,6 +36,20 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddNewCourseComponent } from './components/add-new-course/add-new-course.component';
+import {MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AngularFireStorage, AngularFireStorageModule, BUCKET } from '@angular/fire/compat/storage';
+import { AuthComponent } from './pages/auth/auth.component';
+import { DashBoardContentComponent } from './pages/dash-board-content/dash-board-content.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+
+
+
 
 @NgModule({
   declarations: [
@@ -60,7 +74,10 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     TopSearchItemComponent,
     LatestUploadComponent,
     TestDirective,
-    CourseWidgetComponent
+    CourseWidgetComponent,
+    AddNewCourseComponent,
+    AuthComponent,
+    DashBoardContentComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,10 +94,23 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
-    FirestoreModule
+    FirestoreModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressBarModule,
+    AngularFireStorageModule,
+    MatMenuModule,
+    MatIconModule,
+    ReactiveFormsModule
+
   ],
+
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,UserTrackingService,
+    { provide: BUCKET, useValue: 'my-bucket-name' },
+    { provide: AngularFireStorage, useValue: 'AngularFireStorage' },
   ],
   bootstrap: [AppComponent]
 })

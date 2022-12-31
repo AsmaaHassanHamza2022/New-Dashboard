@@ -1,0 +1,46 @@
+.content{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    .numbers-fields{
+        display:flex;
+        justify-content: space-between;
+        mat-form-field{
+            width:48%;
+        }
+    }
+    .uploaded-feilds{
+        display:flex;
+        justify-content:center;
+        @media (max-width:567px){
+            flex-direction: column;
+            gap:20px;
+        }
+         &> div{
+            width:48%;
+         }
+        button{
+          width:100%;
+        }
+    }
+}
+
+.actions{
+  display:flex;
+  justify-content: center;
+  @media (max-width:567px){
+    flex-direction: column;
+    gap:20px;
+    button{
+        width:100%;
+    }
+}
+    button{
+        background-color: #0075ff;
+        border:1px solid #0075ff;
+        color: #fff;
+        border-radius: 6px;
+        margin:10px auto;
+        padding:4px 20px;
+    }
+}
