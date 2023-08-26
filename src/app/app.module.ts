@@ -47,8 +47,14 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { DashBoardContentComponent } from './pages/dash-board-content/dash-board-content.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslationHttpLoader } from './pages/helper/customLoader';
 
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslationHttpLoader(http);
+}
 
 
 @NgModule({
@@ -78,6 +84,7 @@ import {MatIconModule} from '@angular/material/icon';
     AddNewCourseComponent,
     AuthComponent,
     DashBoardContentComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -103,7 +110,15 @@ import {MatIconModule} from '@angular/material/icon';
     AngularFireStorageModule,
     MatMenuModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
 
   ],
 
